@@ -1,0 +1,5 @@
+project(TestsFreeFallObjectSimulation)
+find_package(GTest REQUIRED)
+add_executable(TestFreeFallUnderDragForceBall test_freefall_object_simulation.cpp)
+target_link_libraries(TestFreeFallUnderDragForceBall PRIVATE GTest::gtest GTest::gtest_main matplot FreeFallSim)
+target_include_directories(FreeFallSim PUBLIC ${CMAKE_SOURCE_DIR}/include)
